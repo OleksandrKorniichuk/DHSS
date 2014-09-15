@@ -79,8 +79,24 @@ body{
   background-color: #766745;
   background: linear-gradient(to top, #7a6a47 0%, #7a6a47 50%, #403825 98%, #8f7d53 98%, #8f7d53 100%);  
 }
-.tab-my-profile{
+#tab-my-profile{
   position: relative;
+  float: left;
+  width: 130px;
+  height: 29px;  
+  border-top: 1px solid #5c5035;
+  border-radius: 5px 5px 0px 0px;
+  text-align: center;
+  line-height: 28px;
+  list-style: none;
+  cursor: pointer;
+  display: none;  
+  color: #fff;
+  background-color: #766745;
+  background: linear-gradient(to bottom, #7a6a47 0%, #7a6a47 50%, #403825 98%, #8f7d53 98%, #8f7d53 100%); 
+}
+.active-tab-my-profile{
+  display: block;
   color: #fff;
   background-color: #766745;
   background: linear-gradient(to bottom, #7a6a47 0%, #7a6a47 50%, #403825 98%, #8f7d53 98%, #8f7d53 100%); 
@@ -143,4 +159,96 @@ body{
 }
 #menu_list ul>li:hover{
   color: white;
+}
+#menu_list a{
+  color: #eeecbc;
+  cursor: pointer;
+  text-decoration: none;
+}
+#menu_list a:hover{
+  color: white;
+}
+.form-my-profile{
+  width: 820px;
+  height: 635px;
+  background-image: url(../assets/images/my_profile/fon_bg.jpg);
+}
+
+.personal-information{
+  width: 300px;
+  position: relative;
+  top: 200px;
+  left:65px;
+  padding-left: 20px;
+  float: left;
+}
+.personal-information-title{
+  font-size: 24px;
+  color: #f9ee71;
+}
+.personal-information table{
+  padding-top: 20px;
+}
+.personal-information table p{
+  color: white;
+  font-weight: 300;
+  font-size: 14px;
+  font-family: Arial;
+  line-height: 2em;
+}
+.on-off-input{
+  display: inline-block;
+  height: 30px;
+  width: 290px;
+  background-color: #67634a;   
+}
+.on-off-input input[type="checkbox"]{
+    display:none;
+}
+.on-off-input span{
+  position: relative;
+  top: -27px;
+  right: 3px;
+  width:63px;
+  height:28px;
+  display:block;
+  float: right;
+  background:url(../assets/images/my_profile/on_off.png) 0 -30px no-repeat;
+}
+.on-off-input input[type="checkbox"]:checked+span{
+    background-position:0 0;
+}
+.link{
+  color: #9a7f20;
+  text-decoration: underline;
+}
+.contact-information{
+  width: 470px;
+}
+.personal-information-size-select{
+  width: 98%;
+}
+.button-footer{
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  top: 250px;
+  text-align: center;
+}
+.button-footer-nav{
+  width: 176px;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: #568804;
+  display: inline-block;
+  margin-left: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+.close-button{
+  vertical-align: top;
+  font-size: 24px;
+
 }

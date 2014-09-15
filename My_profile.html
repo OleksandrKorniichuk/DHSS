@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>3. My_profile.html</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content-lobby">
+            <ul class="tabs">
+                <li class="tab tab-lobby">
+                    <p>Lobby</p>
+                </li>
+                <li class="tab active-tab-my-profile">
+                    <p>My Profile</p>
+                    <div onclick="closetab('box'); return false" class="close-tab"></div>
+                </li>
+            </ul>
+            <div class="content-wrapper">
+                <form class="form-my-profile">
+                    <div class="personal-information">
+                            <p class="personal-information-title">Personal Information</p>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <p>Nickname</p>
+                                    </td>
+                                    <td><p>unity</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>First Name</p>
+                                    </td>
+                                    <td><p>asd</p></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Last Name</p>
+                                    </td>
+                                    <td><p>asd</p></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Date of Birth</p>
+                                    </td>
+                                    <td><p>01/01/1920</p></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Gender</p>
+                                        </td>
+                                    <td><p>Male</p></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>* E-mail Address</p>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="unity@test.com">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="on-off-input">
+                                            <p>Email me the latest promos</p>
+                                            <label>
+                                                <input type="checkbox" checked ><span></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <a href="" class="link"><p>Change my password</p></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="personal-information contact-information">
+                            <p class="personal-information-title">Contact Information</p>
+                            <table>
+                                <tr>
+                                    <td><p>* Address</p></td>
+                                    <td><input type="text" value="asd"></td>
+                                </tr>
+                                <tr>
+                                    <td><p>* City</p></td>
+                                    <td><input type="text" value="asd"></td>
+                                </tr>
+                                <tr>
+                                    <td><p>* Zip/Postal Code</p></td>
+                                    <td><input type="text" value="123"></td>
+                                </tr>
+                                <tr>
+                                    <td><p>Country</p></td>
+                                    <td><p>United States</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>* State/Province</p></td>
+                                    <td>
+                                        <select class="personal-information-size-select">
+                                            <option>Alabama</option>
+                                            <option>Ukraine</option>                                            
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><p>Phone</p></td>
+                                    <td>
+                                        <input type="text" value=" " size="6">
+                                        <input type="text" value=" " size="9">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><p>* Mobile Number</p></td>
+                                    <td><input type="text" value="123"></td>
+                                </tr>
+                                    <td colspan="2">
+                                        <div class="on-off-input">
+                                            <p>Only call me during office hours</p>
+                                            <label>
+                                                <input type="checkbox" ><span></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                            </table>
+                        </div>
+                        <div class="button-footer">
+                            <button type="submit" id="n1" onclick="SEND_MESSAGE_TO_OTHER_WINDOWS('box'); return false" class="button-footer-nav">send messege <br>to other windows</button>
+                            <button type="submit" onclick="SEND_MESSAGE_TO_LOBBY('box'); return false" class="button-footer-nav">send massege  <br>to lobby</button>
+                            <button type="button" onclick="closetab('box'); return false" class="button-footer-nav close-button">CLOSE</button>
+                        </div>
+                    </form>
+
+            </div> 
+        </div>
+    </div> 
+    <script type="text/javascript" src="scripts/my_profile_scripts.js"></script>   
+</body>
+</html>
