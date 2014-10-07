@@ -1,5 +1,5 @@
-setTimeout("StartIndex()", 1500);
-function StartIndex()
-{
-    window.onload = window.location.assign("Lobby.html");  
+function StartIndex(){
+	window.onload = window.location.replace("Lobby.html");  
 }
+setTimeout("StartIndex()", 1000);
+

@@ -6,46 +6,42 @@
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="content">  
         <div class="content-lobby">
             <ul class="tabs">
                 <li class="tab tab-lobby">
                     <p>Lobby</p>
-                </li>
-                <li id="tab-my-profile">
-                    <p>My Profile</p>
-                    <div class="close-tab"></div>
-                </li>
+                </li>               
             </ul>
-            <div class="content-wrapper">
-                <div class="menu">
-                    <button class="menu-lobby" onclick="openbox('box'); return false"></button>
-                    <nav id="menu_list">
-                        <p>User Info</p>
-                        <ul>
-                            <li class="my_profile"><a href="" class="my_profile" onclick="openMy_profile('box'); return false">My Profile</a></li>
-                            <li>My Reports</li>
-                            <li>Game History</li>
-                            <li>Cashiier</li>
-                            <li>Withdraw</li>
-                            <li>Anti-Spam</li>
-                            <li>Language</li>
-                            <li>Logoff</li>
-                        </ul>
-                        <p>Games</p>
-                        <ul>
-                            <li>Roulette</li>
-                            <li>Blackjack</li>
-                            <li>Video Slots</li>
-                            <li>Classic Slots</li>
-                            <li>Video Poker</li>
-                            <li>More Games</li>
-                        </ul>                          
-                    </nav>                    
-                </div>                        
+            <div class="content-wrapper index">
+                  <div id="menu">
+                        <button id="nav-lobby" class="menu-lobby"></button>
+                        <nav id="menu-list">
+                            <p>User Info</p>
+                            <ul>
+                                <li id="my-profile">My Profile</li>
+                                <li>My Reports</li>
+                                <li>Game History</li>
+                                <li>Cashiier</li>
+                                <li>Withdraw</li>
+                                <li>Anti-Spam</li>
+                                <li>Language</li>
+                                <li>Logoff</li>
+                            </ul>
+                            <p>Games</p>
+                            <ul>
+                                <li>Roulette</li>
+                                <li>Blackjack</li>
+                                <li>Video Slots</li>
+                                <li>Classic Slots</li>
+                                <li>Video Poker</li>
+                                <li>More Games</li>
+                            </ul>                          
+                        </nav>                    
+                    </div>                      
             </div> 
-        </div>
-    </div> 
+        </div>      
+    </div>    
     <script type="text/javascript" src="scripts/lobby_scripts.js"></script>   
 </body>
 </html>

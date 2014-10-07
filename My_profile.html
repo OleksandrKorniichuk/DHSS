@@ -5,20 +5,46 @@
     <title>3. My_profile.html</title>
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
-<body>
-    <div class="wrapper">
-        <div class="content-lobby">
-            <ul class="tabs">
-                <li class="tab tab-lobby">
-                    <p>Lobby</p>
-                </li>
-                <li class="tab active-tab-my-profile">
-                    <p>My Profile</p>
-                    <div onclick="closetab('box'); return false" class="close-tab"></div>
-                </li>
-            </ul>
-            <div class="content-wrapper">
-                <form class="form-my-profile">
+<body class="my-profile-active">
+    <div class="content"> 
+        <div class="wrapper">
+            <div class="content-lobby">
+                <ul class="tabs">
+                    <li id="tab-lobby-select" class="tab tab-lobby">
+                        <p>Lobby</p>
+                 </li>
+                    <li id="tab-my-profile-select">
+                        <p>My Profile</p>
+                        <div id="close-tab" class="close-tab"></div>
+                    </li>
+                </ul>
+                <div class="content-wrapper">
+                    <div id="menu">
+                        <button id="nav-lobby" class="menu-lobby"></button>
+                        <nav id="menu-list">
+                            <p>User Info</p>
+                            <ul>
+                                <li id="my-profile">My Profile</li>
+                                <li>My Reports</li>
+                                <li>Game History</li>
+                                <li>Cashiier</li>
+                                <li>Withdraw</li>
+                                <li>Anti-Spam</li>
+                                <li>Language</li>
+                                <li>Logoff</li>
+                            </ul>
+                            <p>Games</p>
+                            <ul>
+                                <li>Roulette</li>
+                                <li>Blackjack</li>
+                                <li>Video Slots</li>
+                                <li>Classic Slots</li>
+                                <li>Video Poker</li>
+                                <li>More Games</li>
+                            </ul>                          
+                        </nav>                    
+                    </div>   
+                <form id="form-my-profile">
                     <div class="personal-information">
                             <p class="personal-information-title">Personal Information</p>
                             <table>
@@ -128,15 +154,16 @@
                             </table>
                         </div>
                         <div class="button-footer">
-                            <button type="submit" id="n1" onclick="SEND_MESSAGE_TO_OTHER_WINDOWS('box'); return false" class="button-footer-nav">send messege <br>to other windows</button>
-                            <button type="submit" onclick="SEND_MESSAGE_TO_LOBBY('box'); return false" class="button-footer-nav">send massege  <br>to lobby</button>
-                            <button type="button" onclick="closetab('box'); return false" class="button-footer-nav close-button">CLOSE</button>
+                            <button type="button" id="SEND_MESSAGE_TO_OTHER_WINDOWS" class="button-footer-nav">send messege <br>to other windows</button>
+                            <button type="button" id="SEND_MESSAGE_TO_LOBBY" class="button-footer-nav">send massege  <br>to lobby</button>
+                            <button type="button" id="close" class="button-footer-nav close-button">CLOSE</button>
                         </div>
                     </form>
 
             </div> 
         </div>
     </div> 
+    </div>
     <script type="text/javascript" src="scripts/my_profile_scripts.js"></script>   
 </body>
 </html>

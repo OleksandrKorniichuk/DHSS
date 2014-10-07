@@ -10,31 +10,38 @@
 html{
   height: 100%;
 }
-body{
-  height: 710px;
+body{  
+  height: 100%;
   background-color: black;
 }
 .content{
   display: block;
+  position: relative;
   margin: 0 auto;
   background-image: url(../assets/images/index/bg.jpg);
   background-position: center;
   background-repeat: no-repeat;  
-  width: 1010px;
-  height: 680px;    
+  background-size: 1010px 680px;
+  width: 100%;
+  height: 100%;
+  min-height: 644px;
+  padding-top: 98px;     
 }
 .index{
   -webkit-animation: indexShow 1s linear 1; 
-
+  -moz-animation: indexShow 1s linear 1;
+  -ms-animation: indexShow 1s linear 1;
+  -o-animation: indexShow 1s linear 1;
+  animation: indexShow 1s linear 1;
 }
-
-@-webkit-keyframes indexShow {
-  0% {
-    opacity: 0;
-  } 
-  100% {
-    opacity: 1;
-  }
+.content-lobby{
+  display: block;
+  position: absolute;
+  width: 1010px; 
+  height: 680px;
+  min-height: 680px;  
+  left: 50%;  
+  margin-left: -505px; 
 }
 .wrapper{  
   display: block;
@@ -42,22 +49,41 @@ body{
   background-repeat: no-repeat;
   background-size: 100%;
   -webkit-animation: lights 1s linear 1; 
+  -moz-animation: lights 1s linear 1;
+  -ms-animation: lights 1s linear 1;
+  -o-animation: lights 1s linear 1;
+  animation: lights 1s linear 1;
   -webkit-animation-delay:1s;
+  -moz-animation-delay:1s;
+  -ms-animation-delay:1s;
+  -o-animation-delay:1s;
+  animation-delay:1s;
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;  
 }
-@-webkit-keyframes lights {
-  0% {
-    background-image: url(../assets/images/index/bg.jpg);  
-  } 
-  100% {
-    background-image: url(../assets/images/lobby/bg.jpg);
-  }
-}
-.content-lobby{
+.my-profile-active{
   display: block;
-  width: 1010px;
-  height: 710px;
-  margin: 0 auto;   
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-animation: lights 1s linear 1; 
+  -moz-animation: lights 1s linear 1;
+  -ms-animation: lights 1s linear 1;
+  -o-animation: lights 1s linear 1;
+  animation: lights 1s linear 1;
+  -webkit-animation-delay:1s;
+  -moz-animation-delay:1s;
+  -ms-animation-delay:1s;
+  -o-animation-delay:1s;
+  animation-delay:1s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; 
 }
 .tabs{
   height: 30px;
@@ -79,7 +105,7 @@ body{
   background-color: #766745;
   background: linear-gradient(to top, #7a6a47 0%, #7a6a47 50%, #403825 98%, #8f7d53 98%, #8f7d53 100%);  
 }
-#tab-my-profile{
+#tab-my-profile-select.active-tab-my-profile{
   position: relative;
   float: left;
   width: 130px;
@@ -90,16 +116,13 @@ body{
   line-height: 28px;
   list-style: none;
   cursor: pointer;
-  display: none;  
+  display: block;  
   color: #fff;
   background-color: #766745;
   background: linear-gradient(to bottom, #7a6a47 0%, #7a6a47 50%, #403825 98%, #8f7d53 98%, #8f7d53 100%); 
 }
-.active-tab-my-profile{
-  display: block;
-  color: #fff;
-  background-color: #766745;
-  background: linear-gradient(to bottom, #7a6a47 0%, #7a6a47 50%, #403825 98%, #8f7d53 98%, #8f7d53 100%); 
+#tab-my-profile-select{
+  display: none;
 }
 .close-tab{
   height:20px; 
@@ -114,12 +137,18 @@ body{
   background-position:0 -21px;
 }
 .content-wrapper{  
-  background-image: url(../assets/images/index/bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 680px;
+  width: 100%;
+  height: 100%;
+  min-height: 680px;
 }
-.menu{
+.page-active{
+  display: none;
+}
+#menu.none{
+  display: none;
+}
+#menu{
+  display: block;
   background-image: url(../assets/images/lobby/content-lobby.jpg);
   background-position: left;
   background-repeat: no-repeat; 
@@ -134,22 +163,25 @@ body{
   top: 3px;
   left: 8px;
 }
-#menu_list{
+#menu-list.menu-list-active{
+  display: block;
+}
+#menu-list{
   width: 110px;
   padding-top: 10px;
   display: none;
 }
-#menu_list>p{
+#menu-list>p{
   padding-right: 10px;
   color: #e3b403;
   height: 19px;
   background-color: #3a3323;
   padding-left: 5px;
 }
-#menu_list>ul{
+#menu-list>ul{
   list-style: none;
 }
-#menu_list ul>li{
+#menu-list ul>li{
   border-bottom: 1px solid black;
   height: 19px;
   background-color: #6b5d3f;
@@ -157,23 +189,27 @@ body{
   color: #eeecbc;
   cursor: pointer;
 }
-#menu_list ul>li:hover{
+#menu-list ul>li:hover{
   color: white;
 }
-#menu_list a{
+#menu-list a{
   color: #eeecbc;
   cursor: pointer;
   text-decoration: none;
 }
-#menu_list a:hover{
+#menu-list a:hover{
   color: white;
 }
-.form-my-profile{
+#form-my-profile.form-my-profile-active{
+  display: block;
+}
+#form-my-profile{
+  display: none;
   width: 820px;
-  height: 635px;
+  height: 635px; 
+  position: relative;
   background-image: url(../assets/images/my_profile/fon_bg.jpg);
 }
-
 .personal-information{
   width: 300px;
   position: relative;
@@ -230,9 +266,9 @@ body{
 }
 .button-footer{
   width: 100%;
-  position: relative;
+  position: absolute;
   margin: 0 auto;
-  top: 250px;
+  top: 534px;
   text-align: center;
 }
 .button-footer-nav{
@@ -250,5 +286,86 @@ body{
 .close-button{
   vertical-align: top;
   font-size: 24px;
+}
 
+@-webkit-keyframes indexShow {
+  0% {
+    opacity: 0;
+  } 
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes indexShow {
+  0% {
+    opacity: 0;
+  } 
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes indexShow {
+  0% {
+    opacity: 0;
+  } 
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes indexShow {
+  0% {
+    opacity: 0;
+  } 
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes indexShow {
+  0% {
+    opacity: 0;
+  } 
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes lights {
+  0% {
+    background-image: url(../assets/images/index/bg.jpg);  
+  } 
+  100% {
+    background-image: url(../assets/images/lobby/bg.jpg);
+  }
+}
+@-moz-keyframes lights {
+  0% {
+    background-image: url(../assets/images/index/bg.jpg);  
+  } 
+  100% {
+    background-image: url(../assets/images/lobby/bg.jpg);
+  }
+}
+@-ms-keyframes lights {
+  0% {
+    background-image: url(../assets/images/index/bg.jpg);  
+  } 
+  100% {
+    background-image: url(../assets/images/lobby/bg.jpg);
+  }
+}
+@-o-keyframes lights {
+  0% {
+    background-image: url(../assets/images/index/bg.jpg);  
+  } 
+  100% {
+    background-image: url(../assets/images/lobby/bg.jpg);
+  }
+}
+@keyframes lights {
+  0% {
+    background-image: url(../assets/images/index/bg.jpg);  
+  } 
+  100% {
+    background-image: url(../assets/images/lobby/bg.jpg);
+  }
 }
